@@ -1,208 +1,304 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Our Projects - Godlove Empire</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-  />
-  <style>
-    @keyframes float {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-10px); }
-    }
-    .animate-float {
-      animation: float 3s ease-in-out infinite;
-    }
-    @keyframes fadeInUp {
-      0% {
-        opacity: 0;
-        transform: translateY(20px);
-      }
-      100% {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-    .fade-in-up {
-      animation: fadeInUp 1s ease forwards;
-    }
-  </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Our Projects - Godlove Empire</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Poppins&display=swap');
+
+        /* Fonts */
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        h1,
+        h2,
+        h3 {
+            font-family: 'DM Serif Display', serif;
+            /* Substitute for Typographica */
+        }
+
+        .slogan {
+            font-family: 'Pacifico', cursive;
+            /* Substitute for Matchmaker */
+        }
+
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in-up {
+            animation: fadeInUp 1s ease forwards;
+        }
+
+        .fade-in-up.delay-300 {
+            animation-delay: 0.3s;
+        }
+
+        .fade-in-up.delay-500 {
+            animation-delay: 0.5s;
+        }
+
+        .fade-in-up.delay-700 {
+            animation-delay: 0.7s;
+        }
+    </style>
 </head>
-<body class="font-sans bg-gray-100 text-gray-800">
-  <header></header>
 
-  <main class="container mx-auto px-4 py-12">
-    <!-- Projects Hero -->
-    <section class="mb-16 text-center relative overflow-hidden">
-      <div class="absolute inset-0 bg-gradient-to-r from-green-50 via-transparent to-green-100 opacity-30 animate-pulse"></div>
-      <h1 class="text-5xl font-extrabold text-gray-800 mb-4 fade-in-up">Our Portfolio</h1>
-      <p class="text-xl text-gray-600 max-w-3xl mx-auto fade-in-up delay-300">
-        Explore our collection of creative work that showcases our expertise and passion for design.
-      </p>
-    </section>
+<body class="bg-black text-white">
 
-    <!-- Project Filters -->
-    <section class="mb-12 fade-in-up delay-500">
-      <div class="flex flex-wrap justify-center gap-2">
-        <button class="px-4 py-2 bg-green-500 text-white rounded-full font-medium hover:bg-green-600 transition">All</button>
-        <button class="px-4 py-2 bg-white hover:bg-gray-100 rounded-full font-medium transition">Logos</button>
-        <button class="px-4 py-2 bg-white hover:bg-gray-100 rounded-full font-medium transition">Print Design</button>
-        <button class="px-4 py-2 bg-white hover:bg-gray-100 rounded-full font-medium transition">Covers</button>
-        <button class="px-4 py-2 bg-white hover:bg-gray-100 rounded-full font-medium transition">Branding</button>
-        <button class="px-4 py-2 bg-white hover:bg-gray-100 rounded-full font-medium transition">Photography</button>
-      </div>
-    </section>
+    <header></header>
 
-    <!-- Projects Grid -->
-    <section class="mb-24">
-      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+    <main class="container mx-auto px-4 py-12">
 
-        <!-- Project Card Example -->
-        <div class="bg-white rounded-xl shadow-lg hover:shadow-2xl border border-gray-100 transform hover:-translate-y-2 hover:scale-105 transition duration-500 fade-in-up">
-          <div class="relative group">
-            <img src="https://media.istockphoto.com/id/1356054726/vector/clipboard-and-gear-icon-project-management-software-development-concept-checklist-with-cog.jpg?s=612x612&w=0&k=20&c=Vmr9Y6F8Q7eCjZp12gTarOa6woZ3hFBh6P2x0X4EA4o=" alt="Project 1" class="w-full h-64 object-cover rounded-t-xl" />
-            <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 flex items-center justify-center text-center p-4 transition-all duration-500 rounded-t-xl">
-              <p class="text-white text-lg">A vibrant visual identity crafted to represent XYZ Corp's vision and values.</p>
+        <!-- Projects Hero -->
+        <section class="mb-16 text-center relative overflow-hidden rounded-xl p-12 shadow-xl">
+            <div class="absolute inset-0 bg-gradient-to-r from-[#A00000] to-[#D50706] opacity-30 animate-pulse"></div>
+            <h1 class="text-5xl font-bold text-white mb-4 fade-in-up font-[Typographica]">Our Portfolio</h1>
+            <p class="slogan text-xl max-w-3xl mx-auto text-white">
+                Explore our collection of creative work that showcases our expertise and passion for design.
+            </p>
+        </section>
+
+        <!-- Project Filters -->
+        <section class="mb-12 fade-in-up delay-500">
+            <div class="flex flex-wrap justify-center gap-2">
+
+                <!-- Active Button: solid red -->
+                <button
+                    class="px-4 py-2 bg-gradient-to-r from-[#A00000] to-[#D50706] text-white rounded-full font-medium hover:brightness-110 transition">
+                    All
+                </button>
+
+                <!-- Transparent buttons with white border -->
+                <button
+                    class="px-4 py-2 border border-white border-opacity-50 rounded-full font-medium hover:bg-white hover:bg-opacity-10 transition">
+                    Logos
+                </button>
+                <button
+                    class="px-4 py-2 border border-white border-opacity-50 rounded-full font-medium hover:bg-white hover:bg-opacity-10 transition">
+                    Print Design
+                </button>
+                <button
+                    class="px-4 py-2 border border-white border-opacity-50 rounded-full font-medium hover:bg-white hover:bg-opacity-10 transition">
+                    Covers
+                </button>
+                <button
+                    class="px-4 py-2 border border-white border-opacity-50 rounded-full font-medium hover:bg-white hover:bg-opacity-10 transition">
+                    Branding
+                </button>
+                <button
+                    class="px-4 py-2 border border-white border-opacity-50 rounded-full font-medium hover:bg-white hover:bg-opacity-10 transition">
+                    Photography
+                </button>
             </div>
-          </div>
-          <div class="p-6">
-            <h3 class="text-2xl font-semibold mb-2 text-green-600">Brand Identity for XYZ Corp</h3>
-            <p class="text-gray-600 mb-4">Complete brand identity including logo, color palette, and brand guidelines.</p>
-            <div class="flex flex-wrap gap-2 mb-4">
-              <span class="bg-gray-100 px-3 py-1 rounded-full text-sm">Logo Design</span>
-              <span class="bg-gray-100 px-3 py-1 rounded-full text-sm">Branding</span>
+        </section>
+
+        <!-- Projects Grid -->
+        <section class="mb-24">
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+
+                <!-- Project Card Example -->
+                <div
+                    class="bg-[#121212] rounded-xl shadow-lg hover:shadow-2xl border border-gray-800 transform hover:-translate-y-2 hover:scale-105 transition duration-500 fade-in-up">
+                    <div class="relative group">
+                        <img src="https://media.istockphoto.com/id/1356054726/vector/clipboard-and-gear-icon-project-management-software-development-concept-checklist-with-cog.jpg?s=612x612&w=0&k=20&c=Vmr9Y6F8Q7eCjZp12gTarOa6woZ3hFBh6P2x0X4EA4o="
+                            alt="Project 1" class="w-full h-64 object-cover rounded-t-xl" />
+                        <div
+                            class="absolute inset-0 bg-black bg-opacity-70 opacity-0 group-hover:opacity-100 flex items-center justify-center text-center p-4 transition-all duration-500 rounded-t-xl">
+                            <p class="text-white text-lg">A vibrant visual identity crafted to represent XYZ Corp's
+                                vision and values.</p>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-semibold mb-2 text-[#D50706]">Brand Identity for XYZ Corp</h3>
+                        <p class="text-gray-400 mb-4">Complete brand identity including logo, color palette, and brand
+                            guidelines.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-gray-800 px-3 py-1 rounded-full text-sm text-gray-300">Logo Design</span>
+                            <span class="bg-gray-800 px-3 py-1 rounded-full text-sm text-gray-300">Branding</span>
+                        </div>
+                        <a href="project.html"
+                            class="inline-block bg-gradient-to-r from-[#A00000] to-[#D50706] text-white font-semibold py-2 px-6 rounded-full hover:brightness-110 transition">
+                            View Project
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div
+                    class="bg-[#121212] rounded-xl shadow-lg hover:shadow-2xl border border-gray-800 transform hover:-translate-y-2 hover:scale-105 transition duration-500 fade-in-up delay-100">
+                    <div class="relative group">
+                        <img src="https://media.istockphoto.com/id/1356054726/vector/clipboard-and-gear-icon-project-management-software-development-concept-checklist-with-cog.jpg?s=612x612&w=0&k=20&c=Vmr9Y6F8Q7eCjZp12gTarOa6woZ3hFBh6P2x0X4EA4o="
+                            alt="Project 2" class="w-full h-64 object-cover rounded-t-xl" />
+                        <div
+                            class="absolute inset-0 bg-black bg-opacity-70 opacity-0 group-hover:opacity-100 flex items-center justify-center text-center p-4 transition-all duration-500 rounded-t-xl">
+                            <p class="text-white text-lg">A stunning album cover designed to captivate listeners and
+                                tell a story.</p>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-semibold mb-2 text-[#D50706]">Music Album Cover</h3>
+                        <p class="text-gray-400 mb-4">Creative cover design for a rising music artist's debut album.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-gray-800 px-3 py-1 rounded-full text-sm text-gray-300">Cover Design</span>
+                            <span class="bg-gray-800 px-3 py-1 rounded-full text-sm text-gray-300">Illustration</span>
+                        </div>
+                        <a href="file:///C:/Users/temba/OneDrive/Desktop/godlove-empire-portfolio/dist/project.html"
+                            class="inline-block bg-gradient-to-r from-[#A00000] to-[#D50706] text-white font-semibold py-2 px-6 rounded-full hover:brightness-110 transition">
+                            View Project
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div
+                    class="bg-[#121212] rounded-xl shadow-lg hover:shadow-2xl border border-gray-800 transform hover:-translate-y-2 hover:scale-105 transition duration-500 fade-in-up delay-200">
+                    <div class="relative group">
+                        <img src="https://media.istockphoto.com/id/1356054726/vector/clipboard-and-gear-icon-project-management-software-development-concept-checklist-with-cog.jpg?s=612x612&w=0&k=20&c=Vmr9Y6F8Q7eCjZp12gTarOa6woZ3hFBh6P2x0X4EA4o="
+                            alt="Project 3" class="w-full h-64 object-cover rounded-t-xl" />
+                        <div
+                            class="absolute inset-0 bg-black bg-opacity-70 opacity-0 group-hover:opacity-100 flex items-center justify-center text-center p-4 transition-all duration-500 rounded-t-xl">
+                            <p class="text-white text-lg">Professional brochure design with impactful layout and
+                                visuals.</p>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-semibold mb-2 text-[#D50706]">Corporate Brochure</h3>
+                        <p class="text-gray-400 mb-4">Informative tri-fold brochure for a financial services company.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-gray-800 px-3 py-1 rounded-full text-sm text-gray-300">Print Design</span>
+                            <span class="bg-gray-800 px-3 py-1 rounded-full text-sm text-gray-300">Brochure</span>
+                        </div>
+                        <a href="file:///C:/Users/temba/OneDrive/Desktop/godlove-empire-portfolio/dist/project.html"
+                            class="inline-block bg-gradient-to-r from-[#A00000] to-[#D50706] text-white font-semibold py-2 px-6 rounded-full hover:brightness-110 transition">
+                            View Project
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div
+                    class="bg-[#121212] rounded-xl shadow-lg hover:shadow-2xl border border-gray-800 transform hover:-translate-y-2 hover:scale-105 transition duration-500 fade-in-up delay-300">
+                    <div class="relative group">
+                        <img src="https://media.istockphoto.com/id/1356054726/vector/clipboard-and-gear-icon-project-management-software-development-concept-checklist-with-cog.jpg?s=612x612&w=0&k=20&c=Vmr9Y6F8Q7eCjZp12gTarOa6woZ3hFBh6P2x0X4EA4o="
+                            alt="Project 4" class="w-full h-64 object-cover rounded-t-xl" />
+                        <div
+                            class="absolute inset-0 bg-black bg-opacity-70 opacity-0 group-hover:opacity-100 flex items-center justify-center text-center p-4 transition-all duration-500 rounded-t-xl">
+                            <p class="text-white text-lg">Vibrant flyers crafted to promote cultural events and
+                                festivals.</p>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-semibold mb-2 text-[#D50706]">Event Flyers</h3>
+                        <p class="text-gray-400 mb-4">Series of promotional flyers for a cultural festival.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-gray-800 px-3 py-1 rounded-full text-sm text-gray-300">Flyers</span>
+                            <span class="bg-gray-800 px-3 py-1 rounded-full text-sm text-gray-300">Event</span>
+                        </div>
+                        <a href="file:///C:/Users/temba/OneDrive/Desktop/godlove-empire-portfolio/dist/project.html"
+                            class="inline-block bg-gradient-to-r from-[#A00000] to-[#D50706] text-white font-semibold py-2 px-6 rounded-full hover:brightness-110 transition">
+                            View Project
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 5 -->
+                <div
+                    class="bg-[#121212] rounded-xl shadow-lg hover:shadow-2xl border border-gray-800 transform hover:-translate-y-2 hover:scale-105 transition duration-500 fade-in-up delay-400">
+                    <div class="relative group">
+                        <img src="https://media.istockphoto.com/id/1356054726/vector/clipboard-and-gear-icon-project-management-software-development-concept-checklist-with-cog.jpg?s=612x612&w=0&k=20&c=Vmr9Y6F8Q7eCjZp12gTarOa6woZ3hFBh6P2x0X4EA4o="
+                            alt="Project 5" class="w-full h-64 object-cover rounded-t-xl" />
+                        <div
+                            class="absolute inset-0 bg-black bg-opacity-70 opacity-0 group-hover:opacity-100 flex items-center justify-center text-center p-4 transition-all duration-500 rounded-t-xl">
+                            <p class="text-white text-lg">An eye-catching vehicle wrap turning every ride into a mobile
+                                advertisement.</p>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-semibold mb-2 text-[#D50706]">Vehicle Wrap Design</h3>
+                        <p class="text-gray-400 mb-4">Full vehicle wrap for a local delivery service company.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-gray-800 px-3 py-1 rounded-full text-sm text-gray-300">Vehicle Wrap</span>
+                            <span class="bg-gray-800 px-3 py-1 rounded-full text-sm text-gray-300">Branding</span>
+                        </div>
+                        <a href="file:///C:/Users/temba/OneDrive/Desktop/godlove-empire-portfolio/dist/project.html"
+                            class="inline-block bg-gradient-to-r from-[#A00000] to-[#D50706] text-white font-semibold py-2 px-6 rounded-full hover:brightness-110 transition">
+                            View Project
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 6 -->
+                <div
+                    class="bg-[#121212] rounded-xl shadow-lg hover:shadow-2xl border border-gray-800 transform hover:-translate-y-2 hover:scale-105 transition duration-500 fade-in-up delay-500">
+                    <div class="relative group">
+                        <img src="https://media.istockphoto.com/id/1356054726/vector/clipboard-and-gear-icon-project-management-software-development-concept-checklist-with-cog.jpg?s=612x612&w=0&k=20&c=Vmr9Y6F8Q7eCjZp12gTarOa6woZ3hFBh6P2x0X4EA4o="
+                            alt="Project 6" class="w-full h-64 object-cover rounded-t-xl" />
+                        <div
+                            class="absolute inset-0 bg-black bg-opacity-70 opacity-0 group-hover:opacity-100 flex items-center justify-center text-center p-4 transition-all duration-500 rounded-t-xl">
+                            <p class="text-white text-lg">Elegant product photography capturing every detail for
+                                e-commerce success.</p>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-semibold mb-2 text-[#D50706]">Product Photography</h3>
+                        <p class="text-gray-400 mb-4">Professional product shots for an e-commerce fashion brand.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-gray-800 px-3 py-1 rounded-full text-sm text-gray-300">Photography</span>
+                            <span class="bg-gray-800 px-3 py-1 rounded-full text-sm text-gray-300">E-commerce</span>
+                        </div>
+                        <a href="file:///C:/Users/temba/OneDrive/Desktop/godlove-empire-portfolio/dist/project.html"
+                            class="inline-block bg-gradient-to-r from-[#A00000] to-[#D50706] text-white font-semibold py-2 px-6 rounded-full hover:brightness-110 transition">
+                            View Project
+                        </a>
+                    </div>
+                </div>
+
             </div>
-            <a href="project.html" class="inline-block bg-green-500 text-white font-semibold py-2 px-6 rounded-full hover:bg-green-600 transition">
-              View Project
+        </section>
+
+        <!-- CTA Section -->
+        <section
+            class="bg-gradient-to-r from-[#A00000] to-[#D50706] text-white rounded-xl p-10 text-center shadow-lg fade-in-up delay-700">
+            <h2 class="text-3xl font-bold mb-4 font-cursive">Like What You See?</h2>
+            <p class="mb-6 max-w-2xl mx-auto text-gray-100">
+                Let's collaborate on your next project. We're ready to bring your ideas to life with our creative
+                expertise.
+            </p>
+            <a href="contact.html"
+                class="inline-block bg-black bg-opacity-30 border border-white border-opacity-40 text-white font-bold py-3 px-8 rounded-full hover:bg-opacity-60 transition duration-300">
+                Start Your Project <i class="fa fa-arrow-right ml-2"></i>
             </a>
-          </div>
-        </div>
-
-        <!-- Project 2 -->
-        <div class="bg-white rounded-xl shadow-lg hover:shadow-2xl border border-gray-100 transform hover:-translate-y-2 hover:scale-105 transition duration-500 fade-in-up delay-100">
-          <div class="relative group">
-            <img src="https://media.istockphoto.com/id/1356054726/vector/clipboard-and-gear-icon-project-management-software-development-concept-checklist-with-cog.jpg?s=612x612&w=0&k=20&c=Vmr9Y6F8Q7eCjZp12gTarOa6woZ3hFBh6P2x0X4EA4o=" alt="Project 2" class="w-full h-64 object-cover rounded-t-xl" />
-            <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 flex items-center justify-center text-center p-4 transition-all duration-500 rounded-t-xl">
-              <p class="text-white text-lg">A stunning album cover designed to captivate listeners and tell a story.</p>
+        </section>
+        <!-- Social -->
+        <section class="mt-20 text-center fade-in-up delay-700">
+            <h2 class="text-3xl font-extrabold text-white mb-8">Connect With Us</h2>
+            <div class="flex justify-center space-x-10 text-gray-400 text-3xl">
+                <a href="#" class="hover:text-[#D50706] transition"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="hover:text-[#D50706] transition"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="hover:text-[#D50706] transition"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="hover:text-[#D50706] transition"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" class="hover:text-[#D50706] transition"><i class="fab fa-pinterest-p"></i></a>
+                <a href="#" class="hover:text-[#D50706] transition"><i class="fab fa-tiktok"></i></a>
             </div>
-          </div>
-          <div class="p-6">
-            <h3 class="text-2xl font-semibold mb-2 text-green-600">Music Album Cover</h3>
-            <p class="text-gray-600 mb-4">Creative cover design for a rising music artist's debut album.</p>
-            <div class="flex flex-wrap gap-2 mb-4">
-              <span class="bg-gray-100 px-3 py-1 rounded-full text-sm">Cover Design</span>
-              <span class="bg-gray-100 px-3 py-1 rounded-full text-sm">Illustration</span>
-            </div>
-            <a href="file:///C:/Users/temba/OneDrive/Desktop/godlove-empire-portfolio/dist/project.html" class="inline-block bg-green-500 text-white font-semibold py-2 px-6 rounded-full hover:bg-green-600 transition">
-              View Project
-            </a>
-          </div>
-        </div>
-
-        <!-- Project 3 -->
-        <div class="bg-white rounded-xl shadow-lg hover:shadow-2xl border border-gray-100 transform hover:-translate-y-2 hover:scale-105 transition duration-500 fade-in-up delay-200">
-          <div class="relative group">
-            <img src="https://media.istockphoto.com/id/1356054726/vector/clipboard-and-gear-icon-project-management-software-development-concept-checklist-with-cog.jpg?s=612x612&w=0&k=20&c=Vmr9Y6F8Q7eCjZp12gTarOa6woZ3hFBh6P2x0X4EA4o=" alt="Project 3" class="w-full h-64 object-cover rounded-t-xl" />
-            <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 flex items-center justify-center text-center p-4 transition-all duration-500 rounded-t-xl">
-              <p class="text-white text-lg">Professional brochure design with impactful layout and visuals.</p>
-            </div>
-          </div>
-          <div class="p-6">
-            <h3 class="text-2xl font-semibold mb-2 text-green-600">Corporate Brochure</h3>
-            <p class="text-gray-600 mb-4">Informative tri-fold brochure for a financial services company.</p>
-            <div class="flex flex-wrap gap-2 mb-4">
-              <span class="bg-gray-100 px-3 py-1 rounded-full text-sm">Print Design</span>
-              <span class="bg-gray-100 px-3 py-1 rounded-full text-sm">Brochure</span>
-            </div>
-            <a href="file:///C:/Users/temba/OneDrive/Desktop/godlove-empire-portfolio/dist/project.html" class="inline-block bg-green-500 text-white font-semibold py-2 px-6 rounded-full hover:bg-green-600 transition">
-              View Project
-            </a>
-          </div>
-        </div>
-
-        <!-- Project 4 -->
-        <div class="bg-white rounded-xl shadow-lg hover:shadow-2xl border border-gray-100 transform hover:-translate-y-2 hover:scale-105 transition duration-500 fade-in-up delay-300">
-          <div class="relative group">
-            <img src="https://media.istockphoto.com/id/1356054726/vector/clipboard-and-gear-icon-project-management-software-development-concept-checklist-with-cog.jpg?s=612x612&w=0&k=20&c=Vmr9Y6F8Q7eCjZp12gTarOa6woZ3hFBh6P2x0X4EA4o=" alt="Project 4" class="w-full h-64 object-cover rounded-t-xl" />
-            <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 flex items-center justify-center text-center p-4 transition-all duration-500 rounded-t-xl">
-              <p class="text-white text-lg">Vibrant flyers crafted to promote cultural events and festivals.</p>
-            </div>
-          </div>
-          <div class="p-6">
-            <h3 class="text-2xl font-semibold mb-2 text-green-600">Event Flyers</h3>
-            <p class="text-gray-600 mb-4">Series of promotional flyers for a cultural festival.</p>
-            <div class="flex flex-wrap gap-2 mb-4">
-              <span class="bg-gray-100 px-3 py-1 rounded-full text-sm">Flyers</span>
-              <span class="bg-gray-100 px-3 py-1 rounded-full text-sm">Event</span>
-            </div>
-            <a href="file:///C:/Users/temba/OneDrive/Desktop/godlove-empire-portfolio/dist/project.html" class="inline-block bg-green-500 text-white font-semibold py-2 px-6 rounded-full hover:bg-green-600 transition">
-              View Project
-            </a>
-          </div>
-        </div>
-
-        <!-- Project 5 -->
-        <div class="bg-white rounded-xl shadow-lg hover:shadow-2xl border border-gray-100 transform hover:-translate-y-2 hover:scale-105 transition duration-500 fade-in-up delay-400">
-          <div class="relative group">
-            <img src="https://media.istockphoto.com/id/1356054726/vector/clipboard-and-gear-icon-project-management-software-development-concept-checklist-with-cog.jpg?s=612x612&w=0&k=20&c=Vmr9Y6F8Q7eCjZp12gTarOa6woZ3hFBh6P2x0X4EA4o=" alt="Project 5" class="w-full h-64 object-cover rounded-t-xl" />
-            <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 flex items-center justify-center text-center p-4 transition-all duration-500 rounded-t-xl">
-              <p class="text-white text-lg">An eye-catching vehicle wrap turning every ride into a mobile advertisement.</p>
-            </div>
-          </div>
-          <div class="p-6">
-            <h3 class="text-2xl font-semibold mb-2 text-green-600">Vehicle Wrap Design</h3>
-            <p class="text-gray-600 mb-4">Full vehicle wrap for a local delivery service company.</p>
-            <div class="flex flex-wrap gap-2 mb-4">
-              <span class="bg-gray-100 px-3 py-1 rounded-full text-sm">Vehicle Wrap</span>
-              <span class="bg-gray-100 px-3 py-1 rounded-full text-sm">Branding</span>
-            </div>
-            <a href="file:///C:/Users/temba/OneDrive/Desktop/godlove-empire-portfolio/dist/project.html" class="inline-block bg-green-500 text-white font-semibold py-2 px-6 rounded-full hover:bg-green-600 transition">
-              View Project
-            </a>
-          </div>
-        </div>
-
-        <!-- Project 6 -->
-        <div class="bg-white rounded-xl shadow-lg hover:shadow-2xl border border-gray-100 transform hover:-translate-y-2 hover:scale-105 transition duration-500 fade-in-up delay-500">
-          <div class="relative group">
-            <img src="https://media.istockphoto.com/id/1356054726/vector/clipboard-and-gear-icon-project-management-software-development-concept-checklist-with-cog.jpg?s=612x612&w=0&k=20&c=Vmr9Y6F8Q7eCjZp12gTarOa6woZ3hFBh6P2x0X4EA4o=" alt="Project 6" class="w-full h-64 object-cover rounded-t-xl" />
-            <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 flex items-center justify-center text-center p-4 transition-all duration-500 rounded-t-xl">
-              <p class="text-white text-lg">Elegant product photography capturing every detail for e-commerce success.</p>
-            </div>
-          </div>
-          <div class="p-6">
-            <h3 class="text-2xl font-semibold mb-2 text-green-600">Product Photography</h3>
-            <p class="text-gray-600 mb-4">Professional product shots for an e-commerce fashion brand.</p>
-            <div class="flex flex-wrap gap-2 mb-4">
-              <span class="bg-gray-100 px-3 py-1 rounded-full text-sm">Photography</span>
-              <span class="bg-gray-100 px-3 py-1 rounded-full text-sm">E-commerce</span>
-            </div>
-            <a href="file:///C:/Users/temba/OneDrive/Desktop/godlove-empire-portfolio/dist/project.html" class="inline-block bg-green-500 text-white font-semibold py-2 px-6 rounded-full hover:bg-green-600 transition">
-              View Project
-            </a>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- CTA Section -->
-    <section class="bg-gradient-to-r from-green-500 to-green-600 text-white rounded-xl p-10 text-center shadow-lg fade-in-up delay-700">
-      <h2 class="text-3xl font-bold mb-4">Like What You See?</h2>
-      <p class="mb-6 max-w-2xl mx-auto">
-        Let's collaborate on your next project. We're ready to bring your ideas to life with our creative expertise.
-      </p>
-      <a href="contact.html" class="bg-white text-green-600 font-bold py-3 px-8 rounded-full hover:bg-gray-100 transition duration-300 inline-block">
-        Start Your Project
-      </a>
-    </section>
-  </main>
-
-  <footer></footer>
-  <script src="assets/js/main.js"></script>
+        </section>
+    </main>
+    <script src="assets/js/main.js"></script>
 </body>
+
 </html>

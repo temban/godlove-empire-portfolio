@@ -1,140 +1,253 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Our Services - Godlove Empire</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-  />
-  <style>
-    @keyframes float {
-      0%, 100% {
-        transform: translateY(0);
-      }
-      50% {
-        transform: translateY(-10px);
-      }
-    }
-    .animate-float {
-      animation: float 3s ease-in-out infinite;
-    }
-    @keyframes fadeInUp {
-      0% {
-        opacity: 0;
-        transform: translateY(20px);
-      }
-      100% {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-    .fade-in-up {
-      animation: fadeInUp 1s ease forwards;
-    }
-  </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Our Services - Godlove Empire</title>
+
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        h1,
+        h2,
+        h3 {
+            font-family: 'DM Serif Display', serif;
+            /* Substitute for Typographica */
+        }
+
+        .slogan {
+            font-family: 'Pacifico', cursive;
+            /* Substitute for Matchmaker */
+        }
+
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in-up {
+            animation: fadeInUp 1s ease forwards;
+        }
+
+        .fade-in-up.delay-300 {
+            animation-delay: 0.3s;
+        }
+
+        .fade-in-up.delay-500 {
+            animation-delay: 0.5s;
+        }
+
+        .fade-in-up.delay-700 {
+            animation-delay: 0.7s;
+        }
+
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        .animate-float {
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in-up {
+            animation: fadeInUp 1s ease forwards;
+        }
+    </style>
 </head>
-<body class="font-sans bg-gray-100 text-gray-800">
-  <header></header>
 
-  <main class="container mx-auto px-4 py-12">
-    <!-- Services Hero -->
-    <section class="mb-16 text-center relative overflow-hidden">
-      <div class="absolute inset-0 bg-gradient-to-r from-green-50 via-transparent to-green-100 opacity-30 animate-pulse"></div>
-      <h1 class="text-5xl font-extrabold text-gray-800 mb-4 fade-in-up">Our Services</h1>
-      <p class="text-xl text-gray-600 max-w-3xl mx-auto fade-in-up delay-300">
-        Comprehensive creative solutions tailored to meet your unique needs and elevate your brand.
-      </p>
-    </section>
+<body class="bg-black text-white">
+    <header></header>
+    <main class="container mx-auto px-4 py-12">
 
-    <!-- Services Grid -->
-    <section class="mb-24">
-      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+        <!-- Services Hero -->
+        <section class="mb-16 text-center fade-in-up">
+            <h1 class="text-5xl font-extrabold text-[#D50706] mb-4">Our Services</h1>
+            <p class="slogan text-2xl max-w-3xl mx-auto text-white">
+                Comprehensive creative solutions tailored to meet your unique needs and elevate your brand.
+            </p>
+        </section>
 
-        <!-- Example Service Card -->
-        <div class="bg-white rounded-xl shadow-lg hover:shadow-2xl border border-gray-100 transform hover:-translate-y-2 hover:scale-105 transition duration-500 fade-in-up">
-          <div class="relative group">
-            <img src="https://img.freepik.com/premium-vector/our-service-banner-design_686319-745.jpg" alt="Logo Design" class="w-full h-52 object-cover rounded-t-xl">
-            <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 flex items-center justify-center text-center p-4 transition-all duration-500 rounded-t-xl">
-              <p class="text-white text-lg">Create stunning and unique logos that represent your brand identity.</p>
+        <!-- Services Grid -->
+        <section class="mb-24">
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+
+                <!-- Example Service Card -->
+                <div
+                    class="bg-black rounded-xl shadow-lg hover:shadow-2xl border border-[#A00000] transform hover:-translate-y-2 hover:scale-105 transition duration-500 fade-in-up">
+                    <div class="relative group">
+                        <img src="https://img.freepik.com/premium-vector/our-service-banner-design_686319-745.jpg"
+                            alt="Logo Design" class="w-full h-52 object-cover rounded-t-xl">
+                        <div
+                            class="absolute inset-0 bg-black bg-opacity-70 opacity-0 group-hover:opacity-100 flex items-center justify-center text-center p-4 transition-all duration-500 rounded-t-xl">
+                            <p class="text-white text-lg">Create stunning and unique logos that represent your brand
+                                identity.</p>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-semibold mb-2 text-[#D50706]">Logo Design</h3>
+                        <p class="text-gray-300 mb-4">Unique, memorable logos that capture your brand's essence and make
+                            a lasting impression.</p>
+                        <a href="contact.html"
+                            class="inline-block bg-gradient-to-r from-[#A00000] to-[#D50706] text-white py-2 px-5 rounded-full hover:opacity-90 transition duration-300">
+                            Get a Quote <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Repeat for other services -->
+                <div
+                    class="bg-black rounded-xl shadow-lg hover:shadow-2xl border border-[#A00000] transform hover:-translate-y-2 hover:scale-105 transition duration-500 fade-in-up delay-100">
+                    <div class="relative group">
+                        <img src="https://img.freepik.com/premium-vector/our-service-banner-design_686319-745.jpg"
+                            alt="Print Design" class="w-full h-52 object-cover rounded-t-xl">
+                        <div
+                            class="absolute inset-0 bg-black bg-opacity-70 opacity-0 group-hover:opacity-100 flex items-center justify-center text-center p-4 transition-all duration-500 rounded-t-xl">
+                            <p class="text-white text-lg">Beautiful posters and flyers that captivate and inform your
+                                audience.</p>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-semibold mb-2 text-[#D50706]">Affiches / Flyers</h3>
+                        <p class="text-gray-300 mb-4">Eye-catching print materials designed to communicate your message
+                            effectively.</p>
+                        <a href="contact.html"
+                            class="inline-block bg-gradient-to-r from-[#A00000] to-[#D50706] text-white py-2 px-5 rounded-full hover:opacity-90 transition duration-300">
+                            Get a Quote <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div
+                    class="bg-black rounded-xl shadow-lg hover:shadow-2xl border border-[#A00000] transform hover:-translate-y-2 hover:scale-105 transition duration-500 fade-in-up delay-200">
+                    <div class="relative group">
+                        <img src="https://img.freepik.com/premium-vector/our-service-banner-design_686319-745.jpg"
+                            alt="Covers" class="w-full h-52 object-cover rounded-t-xl">
+                        <div
+                            class="absolute inset-0 bg-black bg-opacity-70 opacity-0 group-hover:opacity-100 flex items-center justify-center text-center p-4 transition-all duration-500 rounded-t-xl">
+                            <p class="text-white text-lg">Eye-catching covers for music, film, and books that make your
+                                work shine.</p>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-semibold mb-2 text-[#D50706]">Covers</h3>
+                        <p class="text-gray-300 mb-4">Stunning covers for music albums, films, and books that capture
+                            attention.</p>
+                        <a href="contact.html"
+                            class="inline-block bg-gradient-to-r from-[#A00000] to-[#D50706] text-white py-2 px-5 rounded-full hover:opacity-90 transition duration-300">
+                            Get a Quote <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+
             </div>
-          </div>
-          <div class="p-6">
-            <h3 class="text-2xl font-semibold mb-2 text-green-600">Logo Design</h3>
-            <p class="text-gray-600 mb-4">Unique, memorable logos that capture your brand's essence and make a lasting impression.</p>
-            <a href="contact.html" class="inline-block bg-green-500 text-white py-2 px-5 rounded-full hover:bg-green-600 transition duration-300">Get a Quote <i class="fas fa-arrow-right ml-2"></i></a>
-          </div>
-        </div>
+        </section>
 
-        <!-- Repeat for other services -->
-        <div class="bg-white rounded-xl shadow-lg hover:shadow-2xl border border-gray-100 transform hover:-translate-y-2 hover:scale-105 transition duration-500 fade-in-up delay-100">
-          <div class="relative group">
-            <img src="https://img.freepik.com/premium-vector/our-service-banner-design_686319-745.jpg" alt="Print Design" class="w-full h-52 object-cover rounded-t-xl">
-            <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 flex items-center justify-center text-center p-4 transition-all duration-500 rounded-t-xl">
-              <p class="text-white text-lg">Beautiful posters and flyers that captivate and inform your audience.</p>
+        <!-- Additional Services -->
+        <section class="mb-16 fade-in-up delay-500">
+            <h2 class="text-4xl font-bold text-center text-white mb-12">More Services</h2>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+
+                <div
+                    class="group bg-black p-6 rounded-lg shadow-lg border border-[#A00000] text-center hover:bg-[#A00000] hover:text-white transition duration-300">
+                    <div class="text-[#D50706] text-4xl mb-4 animate-float group-hover:text-white">
+                        <i class="fas fa-vector-square"></i>
+                    </div>
+                    <h3 class="font-semibold text-lg">Graphic Design</h3>
+                </div>
+
+                <div
+                    class="group bg-black p-6 rounded-lg shadow-lg border border-[#A00000] text-center hover:bg-[#A00000] hover:text-white transition duration-300">
+                    <div class="text-[#D50706] text-4xl mb-4 animate-float group-hover:text-white">
+                        <i class="fas fa-car"></i>
+                    </div>
+                    <h3 class="font-semibold text-lg">Vehicle Wrapping</h3>
+                </div>
+
+                <div
+                    class="group bg-black p-6 rounded-lg shadow-lg border border-[#A00000] text-center hover:bg-[#A00000] hover:text-white transition duration-300">
+                    <div class="text-[#D50706] text-4xl mb-4 animate-float group-hover:text-white">
+                        <i class="fas fa-portrait"></i>
+                    </div>
+                    <h3 class="font-semibold text-lg">Portrait Art</h3>
+                </div>
+
+                <div
+                    class="group bg-black p-6 rounded-lg shadow-lg border border-[#A00000] text-center hover:bg-[#A00000] hover:text-white transition duration-300">
+                    <div class="text-[#D50706] text-4xl mb-4 animate-float group-hover:text-white">
+                        <i class="fas fa-print"></i>
+                    </div>
+                    <h3 class="font-semibold text-lg">Printing Services</h3>
+                </div>
+
             </div>
-          </div>
-          <div class="p-6">
-            <h3 class="text-2xl font-semibold mb-2 text-green-600">Affiches / Flyers</h3>
-            <p class="text-gray-600 mb-4">Eye-catching print materials designed to communicate your message effectively.</p>
-            <a href="contact.html" class="inline-block bg-green-500 text-white py-2 px-5 rounded-full hover:bg-green-600 transition duration-300">Get a Quote <i class="fas fa-arrow-right ml-2"></i></a>
-          </div>
-        </div>
+        </section>
 
-        <div class="bg-white rounded-xl shadow-lg hover:shadow-2xl border border-gray-100 transform hover:-translate-y-2 hover:scale-105 transition duration-500 fade-in-up delay-200">
-          <div class="relative group">
-            <img src="https://img.freepik.com/premium-vector/our-service-banner-design_686319-745.jpg" alt="Covers" class="w-full h-52 object-cover rounded-t-xl">
-            <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 flex items-center justify-center text-center p-4 transition-all duration-500 rounded-t-xl">
-              <p class="text-white text-lg">Eye-catching covers for music, film, and books that make your work shine.</p>
+
+        <!-- CTA Section -->
+        <section
+            class="bg-gradient-to-r from-[#A00000] to-[#D50706] text-white rounded-xl p-10 text-center shadow-lg fade-in-up delay-700">
+            <h2 class="text-3xl font-bold mb-4">Ready to Start Your Project?</h2>
+            <p class="mb-6 max-w-2xl mx-auto">
+                Let's discuss how we can bring your vision to life with our professional creative services.
+            </p>
+            <a href="contact.html"
+                class="bg-white text-[#A00000] font-bold py-3 px-8 rounded-full hover:bg-gray-100 transition duration-300 inline-block">
+                Contact Us Now
+            </a>
+        </section>
+        <!-- Social -->
+        <section class="mt-20 text-center fade-in-up delay-700">
+            <h2 class="text-3xl font-extrabold text-white mb-8">Connect With Us</h2>
+            <div class="flex justify-center space-x-10 text-gray-400 text-3xl">
+                <a href="#" class="hover:text-[#D50706] transition"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="hover:text-[#D50706] transition"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="hover:text-[#D50706] transition"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="hover:text-[#D50706] transition"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" class="hover:text-[#D50706] transition"><i class="fab fa-pinterest-p"></i></a>
+                <a href="#" class="hover:text-[#D50706] transition"><i class="fab fa-tiktok"></i></a>
             </div>
-          </div>
-          <div class="p-6">
-            <h3 class="text-2xl font-semibold mb-2 text-green-600">Covers</h3>
-            <p class="text-gray-600 mb-4">Stunning covers for music albums, films, and books that capture attention.</p>
-            <a href="contact.html" class="inline-block bg-green-500 text-white py-2 px-5 rounded-full hover:bg-green-600 transition duration-300">Get a Quote <i class="fas fa-arrow-right ml-2"></i></a>
-          </div>
-        </div>
-
-        <!-- Add similar overlay divs for the rest of your services... -->
-
-      </div>
-    </section>
-
-    <!-- Additional Services -->
-    <section class="mb-16 fade-in-up delay-500">
-      <h2 class="text-4xl font-bold text-center text-gray-800 mb-12">More Services</h2>
-      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
-        <div class="bg-white p-6 rounded-lg shadow-lg border border-gray-100 text-center hover:bg-green-50 transition duration-300">
-          <div class="text-green-500 text-4xl mb-4 animate-float"><i class="fas fa-vector-square"></i></div>
-          <h3 class="font-semibold text-lg">Graphic Design</h3>
-        </div>
-        <div class="bg-white p-6 rounded-lg shadow-lg border border-gray-100 text-center hover:bg-green-50 transition duration-300">
-          <div class="text-green-500 text-4xl mb-4 animate-float"><i class="fas fa-car"></i></div>
-          <h3 class="font-semibold text-lg">Vehicle Wrapping</h3>
-        </div>
-        <div class="bg-white p-6 rounded-lg shadow-lg border border-gray-100 text-center hover:bg-green-50 transition duration-300">
-          <div class="text-green-500 text-4xl mb-4 animate-float"><i class="fas fa-portrait"></i></div>
-          <h3 class="font-semibold text-lg">Portrait Art</h3>
-        </div>
-        <div class="bg-white p-6 rounded-lg shadow-lg border border-gray-100 text-center hover:bg-green-50 transition duration-300">
-          <div class="text-green-500 text-4xl mb-4 animate-float"><i class="fas fa-print"></i></div>
-          <h3 class="font-semibold text-lg">Printing Services</h3>
-        </div>
-        <!-- ... other additional services ... -->
-      </div>
-    </section>
-
-    <!-- CTA Section -->
-    <section class="bg-gradient-to-r from-green-500 to-green-600 text-white rounded-xl p-10 text-center shadow-lg fade-in-up delay-700">
-      <h2 class="text-3xl font-bold mb-4">Ready to Start Your Project?</h2>
-      <p class="mb-6 max-w-2xl mx-auto">Let's discuss how we can bring your vision to life with our professional creative services.</p>
-      <a href="contact.html" class="bg-white text-green-600 font-bold py-3 px-8 rounded-full hover:bg-gray-100 transition duration-300 inline-block">Contact Us Now</a>
-    </section>
-  </main>
-
-  <footer></footer>
-  <script src="assets/js/main.js"></script>
+        </section>
+    </main>
+    <script src="assets/js/main.js"></script>
 </body>
+
 </html>
