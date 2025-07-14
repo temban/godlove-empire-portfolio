@@ -109,7 +109,6 @@ Full text in [LICENSE](LICENSE) file.
 ## Screenshots
 <img width="287" height="544" alt="Screenshot 2025-07-14 090035" src="https://github.com/user-attachments/assets/67113ba0-fc60-4a03-ae53-f54e83cabd54" />
 <img width="278" height="539" alt="Screenshot 2025-07-14 085931" src="https://github.com/user-attachments/assets/c9170efd-2a80-4794-a7c5-2f0f2c357f40" />
-<img width="287" height="544" alt="Screenshot 2025-07-14 090035" src="https://github.com/user-attachments/assets/4e511206-f81a-418c-8099-9b45edb73f5f" />
 <img width="939" height="541" alt="Screenshot 2025-07-14 090251" src="https://github.com/user-attachments/assets/7cedb190-854b-47a6-ab6f-a5c73ffad90f" />
 <img width="914" height="553" alt="Screenshot 2025-07-14 090323" src="https://github.com/user-attachments/assets/bb6901db-4827-4eab-b342-429ef4759b0e" />
 <img width="913" height="542" alt="Screenshot 2025-07-14 090440" src="https://github.com/user-attachments/assets/db176aca-804c-4a36-b5d8-9419f43c6618" />
