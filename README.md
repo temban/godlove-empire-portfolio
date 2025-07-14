@@ -1,6 +1,3 @@
-Here's the complete **README.md** in clean Markdown format:
-
-```markdown
 # Godlove Empire Portfolio Website
 
 ![Godlove Empire Logo](assets/images/logo.png)
