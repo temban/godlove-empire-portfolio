@@ -1,7 +1,5 @@
 # Godlove Empire Portfolio Website
 
-![Godlove Empire Logo](assets/images/logo.png)
-
 A modern, responsive portfolio website for Godlove Empire showcasing their visual and artistic services.
 
 ## Table of Contents
