@@ -81,13 +81,17 @@ npm run format
 
 **Project Structure**:
 ```
-dist/
-├── css/
-├── js/
-├── images/
-src/
-├── scss/
-├── assets/
+/godlove-empire-portfolio
+  /dist
+    index.html
+    about.html
+    services.html
+    project.html
+    projects.html
+    contact.html
+  /assets
+    /js
+      main.js
 ```
 
 ## Team
