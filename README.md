@@ -1,5 +1,5 @@
 # Godlove Empire Portfolio Website
-Professional portfolio showcasing visual design services since 2017.
+Professional portfolio showcasing visual design services.
 
 ## Table of Contents
 
@@ -98,12 +98,12 @@ npm run format
 
 **Core Team**:
 - Godlove - Founder & Creative Director
-- [Your Name] - Lead Developer
-- [Designer Name] - UI/UX Designer
+- Lead Developer
+- UI/UX Designer
 
 **Contributors**:
-- [QA Tester Name] - Testing
-- [Copywriter Name] - Content
+- Testing
+- Content
 
 ## License
 
