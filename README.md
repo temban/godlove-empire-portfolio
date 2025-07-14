@@ -56,25 +56,11 @@ The website was designed to:
 - **Design**:
   - Tailwind CSS for styling
   - Font Awesome for icons
-
-## Project Structure
-
-godlove-empire-portfolio/dist/
-├── assets/
-│   ├── js/
-│   │   ├── main.js (main JavaScript file)
-│   └── images/
-├── about.html
-├── services.html
-├── project.html
-├── projects.html
-├── contact.html
-├── index.html
-└── README.md
-
+    
+<img width="278" height="539" alt="Screenshot 2025-07-14 085931" src="https://github.com/user-attachments/assets/cdf053a1-906f-47ae-8337-62ddcaefb545" />
+<img width="913" height="542" alt="Screenshot 2025-07-14 090440" src="https://github.com/user-attachments/assets/03b0bcb5-8a2c-4332-b99b-0d668aa9b919" />
 <img width="914" height="553" alt="Screenshot 2025-07-14 090323" src="https://github.com/user-attachments/assets/3a66e10a-755e-42e2-a03d-e6bc986a0808" />
 <img width="939" height="541" alt="Screenshot 2025-07-14 090251" src="https://github.com/user-attachments/assets/a4a43276-66aa-43a9-b9c2-9259d5572977" />
 <img width="287" height="544" alt="Screenshot 2025-07-14 090035" src="https://github.com/user-attachments/assets/043bbada-951d-4be4-96d5-216d72b9f19f" />
-<img width="278" height="539" alt="Screenshot 2025-07-14 085931" src="https://github.com/user-attachments/assets/cdf053a1-906f-47ae-8337-62ddcaefb545" />
-<img width="913" height="542" alt="Screenshot 2025-07-14 090440" src="https://github.com/user-attachments/assets/03b0bcb5-8a2c-4332-b99b-0d668aa9b919" />
+
 
