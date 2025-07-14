@@ -11,10 +11,9 @@ Professional portfolio showcasing visual design services since 2017.
 
 - [Project Overview](#project-overview)
 - [Features](#features)
-- [Technologies](#technologies)
+- [Technologies Used](#technologies-used)
 - [Installation](#installation)
-- [Development](#development)
-- [Screenshots](#screenshots)
+- [Usage](#usage)
 - [Team](#team)
 - [License](#license)
 
