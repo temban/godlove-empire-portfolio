@@ -122,3 +122,23 @@ Full text in [LICENSE](LICENSE) file.
 <img width="914" height="553" alt="Screenshot 2025-07-14 090323" src="https://github.com/user-attachments/assets/bb6901db-4827-4eab-b342-429ef4759b0e" />
 <img width="913" height="542" alt="Screenshot 2025-07-14 090440" src="https://github.com/user-attachments/assets/db176aca-804c-4a36-b5d8-9419f43c6618" />
 <img width="943" height="539" alt="Screenshot 2025-07-15 000202" src="https://github.com/user-attachments/assets/f5c69000-a03c-4c6b-bf29-463fcc3bd860" />
+
+
+frontend/
+├── assets/
+│   ├── css/
+│   │   └── style.css
+│   └── js/
+│       └── main.js
+└── pages/
+    ├── index.html              <-- ✅ Home page
+    ├── services.html           <-- ✅ Services page
+    ├── projects.html           <-- ✅ Projects page
+    ├── about-us.html           <-- ✅ About Us page
+    ├── contact-us.html         <-- ✅ Contact Us page
+    └── faq.html                <-- ✅ FAQ page
+
+
+
+
+
