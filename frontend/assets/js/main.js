@@ -9,8 +9,8 @@ function loadNavigation() {
     { name: "À Propos", path: "about.html" },
     { name: "Services", path: "services.html" },
     { name: "Projets", path: "projects.html" },
-    { name: "Contact", path: "contact.html" },
-    { name: "FAQ", path: "faq.html" }
+    { name: "Contacts", path: "contact.html" },
+    { name: "FAQs", path: "faq.html" }
   ];
 
   const nav = `
@@ -110,14 +110,11 @@ function loadFooter() {
     <div class="max-w-6xl mx-auto">
       <div class="grid grid-cols-1 md:grid-cols-4 gap-8 md:gap-12 lg:gap-16">
         <!-- Godlove Empire Section -->
-        <div class="md:col-span-1 flex flex-col items-center md:items-start">
+        <div class="md:col-span-1 flex flex-col items-center">
           <a href="index.html" class="mb-5">
-            <img src="https://study.tameri.tech/static/logo-godlove.png" alt="Godlove Empire Logo" class="w-[158px] h-[90px]">
+            <img src="https://study.tameri.tech/static/footer.png" alt="Godlove Empire Logo" class="w-[258px] h-[150px] object-contain mx-auto">
           </a>
-          <p class="mb-6 leading-relaxed max-w-xs text-center md:text-left">
-            LABEL DE CRÉATION VISUELLE & ARTISTIQUE.
-          </p>
-          <div class="flex gap-4 justify-center md:justify-start">
+          <div class="flex gap-4 justify-center">
             <a href="#" aria-label="Facebook" class="w-10 h-10 rounded-full bg-stone-700 flex items-center justify-center hover:bg-red-700 transition-colors">
               <i class="fab fa-facebook-f"></i>
             </a>
@@ -143,8 +140,8 @@ function loadFooter() {
             <li><a href="about-us.html" class="hover:text-red-500 transition-colors">À Propos</a></li>
             <li><a href="services.html" class="hover:text-red-500 transition-colors">Services</a></li>
             <li><a href="projects.html" class="hover:text-red-500 transition-colors">Projets</a></li>
-            <li><a href="contact-us.html" class="hover:text-red-500 transition-colors">Contact</a></li>
-            <li><a href="faq.html" class="hover:text-red-500 transition-colors">FAQ</a></li>
+            <li><a href="contact-us.html" class="hover:text-red-500 transition-colors">Contacts</a></li>
+            <li><a href="faq.html" class="hover:text-red-500 transition-colors">FAQs</a></li>
           </ul>
         </div>
 
@@ -153,21 +150,35 @@ function loadFooter() {
           <h4 class="text-xl font-semibold mb-5 text-center md:text-left">Services</h4>
           <ul class="space-y-3 font-medium text-center md:text-left">
             <li><a href="services.html#design" class="hover:text-red-500 transition-colors">Design Graphique</a></li>
-            <li><a href="services.html#vehicle" class="hover:text-red-500 transition-colors">Habilage de Véhicule</a></li>
-            <li><a href="services.html#portrait" class="hover:text-red-500 transition-colors">Portrait Artistique</a></li>
+                        <li><a href="services.html#portrait" class="hover:text-red-500 transition-colors">Agrandissement des Portraits Artistiques</a></li>
+            <li><a href="services.html#vehicle" class="hover:text-red-500 transition-colors">Habillage de Véhicule</a></li>
             <li><a href="services.html#print" class="hover:text-red-500 transition-colors">Imprimerie</a></li>
+            <li><a href="services.html#print" class="hover:text-red-500 transition-colors">Photographie</a></li>
           </ul>
         </div>
 
         <!-- Contact Section -->
         <div class="flex flex-col items-center md:items-start">
-          <h4 class="text-xl font-semibold mb-5 text-center md:text-left">Contact</h4>
-          <div class="text-center md:text-left">
-            <p class="mb-2 font-medium">Gatineau, Québec (Canada)</p>
-            <p class="mb-2 font-medium">Douala, Cameroun</p>
-            <p class="mb-2 font-medium">WhatsApp: <a href="https://wa.me/237659005100" target="_blank" class="hover:text-red-500">+237 659 00 51 00</a></p>
-            <p class="mb-2 font-medium">Canada: +1 613 621 9870</p>
-            <p class="font-medium">Email: <a href="mailto:gadloveempire@gmail.com" class="hover:text-red-500">gadloveempire@gmail.com</a></p>
+          <h4 class="text-xl font-semibold mb-5 text-center md:text-left">Contacts</h4>
+          <div class="text-center md:text-left space-y-2 font-medium">
+            <p>
+              <i class="fas fa-map-marker-alt text-red-500 mr-2"></i> Gatineau, Québec (Canada)
+            </p>
+            <p>
+              <i class="fas fa-map-marker-alt text-red-500 mr-2"></i> Douala, Cameroun
+            </p>
+            <p>
+              <img src="https://flagcdn.com/w20/cm.png" alt="Cameroon Flag" class="inline w-5 h-4 mr-1"> 
+              <i class="fab fa-whatsapp text-green-500 mr-2"></i> 
+              <a href="https://wa.me/237659005100" target="_blank" class="hover:text-red-500">+237 659 00 51 00</a>
+            </p>
+            <p>
+              <img src="https://flagcdn.com/w20/ca.png" alt="Canada Flag" class="inline w-5 h-4 mr-1"> +1 613 621 9870
+            </p>
+            <p>
+  <i class="fas fa-envelope text-red-500 mr-2"></i>
+  <a href="mailto:gadloveempire@gmail.com" class="hover:text-red-500">gadloveempire@gmail.com</a>
+</p>
           </div>
         </div>
       </div>
@@ -180,6 +191,7 @@ function loadFooter() {
   `;
   document.querySelector('footer').innerHTML = footer;
 }
+
 
 // Project Gallery Functionality
 function setupProjectGallery() {
