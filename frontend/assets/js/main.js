@@ -14,20 +14,21 @@ function loadNavigation() {
   ];
 
   const nav = `
-    <nav class="bg-stone-950 text-neutral-100 font-poppins shadow-lg">
-      <div class="max-w-[1384px] mx-auto px-6 sm:px-8 lg:px-10">
-        <div class="flex items-center justify-between h-20">
-          <div class="flex-shrink-0">
-            <a href="index.html" aria-label="Godlove Empire Accueil">
-              <img class="w-[120px] h-[60px]" src="https://study.tameri.tech/static/logo-godlove.png" alt="Logo Godlove">
-            </a>
-          </div>
+  <nav class="bg-stone-950 text-neutral-100 font-poppins shadow-lg">
+    <div class="max-w-[1384px] mx-auto px-6 sm:px-8 lg:px-10">
+      <div class="flex items-center justify-between h-20">
+        <div class="flex-shrink-0">
+          <a href="index.html" aria-label="Godlove Empire Accueil" class="flex items-center">
+            <!-- Updated logo with proper aspect ratio -->
+            <img class="h-12 w-auto object-contain" src="https://study.tameri.tech/static/logo-godlove.png" alt="Logo Godlove">
+          </a>
+        </div>
 
           <!-- Desktop Menu -->
           <div class="hidden md:flex space-x-6">
             ${pages.map(({ name, path }) => {
-              const isActive = currentPage === path.toLowerCase();
-              return `
+    const isActive = currentPage === path.toLowerCase();
+    return `
               <a href="${path}" 
                  class="px-4 py-2 rounded-md text-lg font-medium transition-colors duration-200
                  ${isActive ? 'text-red-500 border-b-2 border-red-600 font-semibold' : 'text-neutral-300 hover:text-red-400 hover:bg-red-900/20'}"
@@ -35,7 +36,7 @@ function loadNavigation() {
                 ${name}
               </a>
               `;
-            }).join("")}
+  }).join("")}
           </div>
 
           <!-- Language Switcher -->
@@ -79,15 +80,15 @@ function loadNavigation() {
       <!-- Mobile Menu -->
       <div id="mobile-menu" class="md:hidden hidden px-6 pb-6 space-y-1 bg-stone-950">
         ${pages.map(({ name, path }) => {
-          const isActive = currentPage === path.toLowerCase();
-          return `
+    const isActive = currentPage === path.toLowerCase();
+    return `
           <a href="${path}" class="block px-4 py-2 rounded-md w-fit text-lg font-medium transition-colors duration-200
             ${isActive ? 'text-red-500 border-b-2 border-red-600 font-semibold' : 'text-neutral-300 hover:text-red-400 hover:bg-red-900/20'}"
             aria-current="${isActive ? 'page' : undefined}">
             ${name}
           </a>
           `;
-        }).join("")}
+  }).join("")}
       </div>
     </nav>
   `;
@@ -106,92 +107,101 @@ function loadNavigation() {
 
 function loadFooter() {
   const footer = `
-  <footer class="bg-stone-900 text-neutral-200 font-poppins py-12 px-6">
-    <div class="max-w-6xl mx-auto">
-      <div class="grid grid-cols-1 md:grid-cols-4 gap-8 md:gap-12 lg:gap-16">
-        <!-- Godlove Empire Section -->
-        <div class="md:col-span-1 flex flex-col items-center">
-          <a href="index.html" class="mb-5">
-            <img src="https://study.tameri.tech/static/footer.png" alt="Godlove Empire Logo" class="w-[258px] h-[150px] object-contain mx-auto">
+<footer class="bg-stone-900 text-neutral-200 font-poppins py-12 px-6">
+  <div class="max-w-7xl mx-auto">
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-8 md:gap-12 lg:gap-16">
+      <!-- Godlove Empire Logo and Social Media -->
+      <div class="md:col-span-1 flex flex-col items-center">
+        <a href="index.html" class="mb-5">
+          <img src="https://study.tameri.tech/static/footer.png" alt="Godlove Empire Logo" class="h-24 w-auto object-contain mx-auto">
+        </a>
+        <div class="flex gap-4 justify-center">
+          <!-- Social media icons with proper links -->
+          <a href="https://www.facebook.com/share/1BrDqhVNe7/" aria-label="Facebook" target="_blank" class="w-10 h-10 rounded-full bg-stone-700 flex items-center justify-center hover:bg-[#D50706] transition-colors">
+            <i class="fab fa-facebook-f text-white hover:text-white"></i>
           </a>
-          <div class="flex gap-4 justify-center">
-            <a href="#" aria-label="Facebook" class="w-10 h-10 rounded-full bg-stone-700 flex items-center justify-center hover:bg-red-700 transition-colors">
-              <i class="fab fa-facebook-f"></i>
-            </a>
-            <a href="#" aria-label="Instagram" class="w-10 h-10 rounded-full bg-stone-700 flex items-center justify-center hover:bg-red-700 transition-colors">
-              <i class="fab fa-instagram"></i>
-            </a>
-            <a href="#" aria-label="LinkedIn" class="w-10 h-10 rounded-full bg-stone-700 flex items-center justify-center hover:bg-red-700 transition-colors">
-              <i class="fab fa-linkedin-in"></i>
-            </a>
-            <a href="#" aria-label="TikTok" class="w-10 h-10 rounded-full bg-stone-700 flex items-center justify-center hover:bg-red-700 transition-colors">
-              <i class="fab fa-tiktok"></i>
-            </a>
-            <a href="#" aria-label="YouTube" class="w-10 h-10 rounded-full bg-stone-700 flex items-center justify-center hover:bg-red-700 transition-colors">
-              <i class="fab fa-youtube"></i>
-            </a>
-          </div>
-        </div>
-
-        <!-- Entreprise Section -->
-        <div class="flex flex-col items-center md:items-start">
-          <h4 class="text-xl font-semibold mb-5 text-center md:text-left">Entreprise</h4>
-          <ul class="space-y-3 font-medium text-center md:text-left">
-            <li><a href="about-us.html" class="hover:text-red-500 transition-colors">À Propos</a></li>
-            <li><a href="services.html" class="hover:text-red-500 transition-colors">Services</a></li>
-            <li><a href="projects.html" class="hover:text-red-500 transition-colors">Projets</a></li>
-            <li><a href="contact-us.html" class="hover:text-red-500 transition-colors">Contacts</a></li>
-            <li><a href="faq.html" class="hover:text-red-500 transition-colors">FAQs</a></li>
-          </ul>
-        </div>
-
-        <!-- Services Section -->
-        <div class="flex flex-col items-center md:items-start">
-          <h4 class="text-xl font-semibold mb-5 text-center md:text-left">Services</h4>
-          <ul class="space-y-3 font-medium text-center md:text-left">
-            <li><a href="services.html#design" class="hover:text-red-500 transition-colors">Design Graphique</a></li>
-                        <li><a href="services.html#portrait" class="hover:text-red-500 transition-colors">Agrandissement des Portraits Artistiques</a></li>
-            <li><a href="services.html#vehicle" class="hover:text-red-500 transition-colors">Habillage de Véhicule</a></li>
-            <li><a href="services.html#print" class="hover:text-red-500 transition-colors">Imprimerie</a></li>
-            <li><a href="services.html#print" class="hover:text-red-500 transition-colors">Photographie</a></li>
-          </ul>
-        </div>
-
-        <!-- Contact Section -->
-        <div class="flex flex-col items-center md:items-start">
-          <h4 class="text-xl font-semibold mb-5 text-center md:text-left">Contacts</h4>
-          <div class="text-center md:text-left space-y-2 font-medium">
-            <p>
-              <i class="fas fa-map-marker-alt text-red-500 mr-2"></i> Gatineau, Québec (Canada)
-            </p>
-            <p>
-              <i class="fas fa-map-marker-alt text-red-500 mr-2"></i> Douala, Cameroun
-            </p>
-            <p>
-              <img src="https://flagcdn.com/w20/cm.png" alt="Cameroon Flag" class="inline w-5 h-4 mr-1"> 
-              <i class="fab fa-whatsapp text-green-500 mr-2"></i> 
-              <a href="https://wa.me/237659005100" target="_blank" class="hover:text-red-500">+237 659 00 51 00</a>
-            </p>
-            <p>
-              <img src="https://flagcdn.com/w20/ca.png" alt="Canada Flag" class="inline w-5 h-4 mr-1"> +1 613 621 9870
-            </p>
-            <p>
-  <i class="fas fa-envelope text-red-500 mr-2"></i>
-  <a href="mailto:gadloveempire@gmail.com" class="hover:text-red-500">gadloveempire@gmail.com</a>
-</p>
-          </div>
+          <a href="https://www.instagram.com/godlove_empire_?igsh=M205Mnl3MHk5aWRq" aria-label="Instagram" target="_blank" class="w-10 h-10 rounded-full bg-stone-700 flex items-center justify-center hover:bg-[#D50706] transition-colors">
+            <i class="fab fa-instagram text-white hover:text-white"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/godlove-empire-25ab71198" aria-label="LinkedIn" target="_blank" class="w-10 h-10 rounded-full bg-stone-700 flex items-center justify-center hover:bg-[#D50706] transition-colors">
+            <i class="fab fa-linkedin-in text-white hover:text-white"></i>
+          </a>
+          <a href="https://www.tiktok.com/@monsieur.godlove?_t=ZM-8yGVq1ANZI8&_r=1" aria-label="TikTok" target="_blank" class="w-10 h-10 rounded-full bg-stone-700 flex items-center justify-center hover:bg-[#D50706] transition-colors">
+            <i class="fab fa-tiktok text-white hover:text-white"></i>
+          </a>
+          <a href="http://www.youtube.com/@godloveempire" aria-label="YouTube" target="_blank" class="w-10 h-10 rounded-full bg-stone-700 flex items-center justify-center hover:bg-[#D50706] transition-colors">
+            <i class="fab fa-youtube text-white hover:text-white"></i>
+          </a>
+          <a href="https://wa.me/c/237659005100" aria-label="WhatsApp" target="_blank" class="w-10 h-10 rounded-full bg-stone-700 flex items-center justify-center hover:bg-[#D50706] transition-colors">
+            <i class="fab fa-whatsapp text-white hover:text-white"></i>
+          </a>
         </div>
       </div>
 
-      <div class="mt-14 text-center text-neutral-400 text-sm select-none">
-        &copy; ${new Date().getFullYear()} Godlove Empire. Tous droits réservés.
+      <!-- Contact Information with Flags -->
+      <div class="flex flex-col items-center md:items-start">
+        <h4 class="text-xl font-semibold mb-5 text-center md:text-left">Contacts</h4>
+        <div class="text-center md:text-left space-y-3 font-medium">
+          <p class="flex items-center justify-center md:justify-start">
+            <img src="https://flagcdn.com/w20/ca.png" alt="Canada Flag" class="w-5 h-4 mr-2">
+            <i class="fas fa-phone text-[#D50706] mr-2 w-5 text-center"></i> 
+            <a href="tel:+16136219870" class="hover:text-[#D50706] transition-colors">+1 613 621 9870</a>
+          </p>
+          <p class="flex items-center justify-center md:justify-start">
+            <img src="https://flagcdn.com/w20/cm.png" alt="Cameroon Flag" class="w-5 h-4 mr-2">
+            <i class="fab fa-whatsapp text-[#D50706] mr-2 w-5 text-center"></i> 
+            <a href="https://wa.me/237659005100" target="_blank" class="hover:text-[#D50706] transition-colors">+237 659 00 51 00</a>
+          </p>
+          <p class="flex items-center justify-center md:justify-start">
+            <i class="fas fa-envelope text-[#D50706] mr-2 w-5 text-center"></i>
+            <a href="mailto:godloveempire@gmail.com" class="hover:text-[#D50706] transition-colors">godloveempire@gmail.com</a>
+          </p>
+          <p class="flex items-center justify-center md:justify-start gap-2">
+            <img src="https://flagcdn.com/w20/ca.png" alt="Canada Flag" class="w-5 h-4 flex-shrink-0">
+            <i class="fas fa-map-marker-alt text-[#D50706] w-5 flex-shrink-0"></i>
+            <span class="whitespace-nowrap">Gatineau, Québec (Canada)</span>
+          </p>
+          <p class="flex items-center justify-center md:justify-start gap-2">
+            <img src="https://flagcdn.com/w20/cm.png" alt="Cameroon Flag" class="w-5 h-4 flex-shrink-0">
+            <i class="fas fa-map-marker-alt text-[#D50706] w-5 flex-shrink-0"></i>
+            <span class="whitespace-nowrap">Douala, Cameroun</span>
+          </p>
+        </div>
+      </div>
+
+      <!-- Company Links -->
+      <div class="flex flex-col items-center md:items-start">
+        <h4 class="text-xl font-semibold mb-5 text-center md:text-left">Entreprise</h4>
+        <ul class="space-y-3 font-medium text-center md:text-left">
+          <li><a href="about.html" class="hover:text-[#D50706] transition-colors">À Propos</a></li>
+          <li><a href="services.html" class="hover:text-[#D50706] transition-colors">Services</a></li>
+          <li><a href="projects.html" class="hover:text-[#D50706] transition-colors">Projets</a></li>
+          <li><a href="contact.html" class="hover:text-[#D50706] transition-colors">Contacts</a></li>
+          <li><a href="faq.html" class="hover:text-[#D50706] transition-colors">FAQs</a></li>
+        </ul>
+      </div>
+
+      <!-- Services Links -->
+      <div class="flex flex-col items-center md:items-start">
+        <h4 class="text-xl font-semibold mb-5 text-center md:text-left">Services</h4>
+        <ul class="space-y-3 font-medium text-center md:text-left">
+          <li><a href="services.html#design" class="hover:text-[#D50706] transition-colors">Design Graphique</a></li>
+          <li><a href="services.html#portrait" class="hover:text-[#D50706] transition-colors">Agrandissement des Portraits Artistiques</a></li>
+          <li><a href="services.html#print" class="hover:text-[#D50706] transition-colors">Imprimerie</a></li>
+          <li><a href="services.html#photo" class="hover:text-[#D50706] transition-colors">Photographie</a></li>
+        </ul>
       </div>
     </div>
-  </footer>
+
+    <!-- Copyright -->
+    <div class="mt-14 text-center text-neutral-400 text-sm select-none">
+      &copy; <span id="current-year">2025</span> Godlove Empire. Tous droits réservés.
+    </div>
+  </div>
+</footer>
   `;
   document.querySelector('footer').innerHTML = footer;
 }
-
 
 // Project Gallery Functionality
 function setupProjectGallery() {
@@ -239,23 +249,23 @@ function setupProjectGallery() {
       ]
     },
     3: {
-      title: "Habillage de Véhicule",
-      category: "Habillage Véhicule",
-      description: "Design et installation d'habillage complet pour une flotte de véhicules de livraison. Le projet incluait la conception graphique, l'impression sur vinyle haute qualité et l'installation professionnelle sur 12 véhicules.",
-      client: "Livraison Express Québec",
+      title: "Agrandissement des Portraits Artistiques",
+      category: "portrait",  // Changed to match the data-category
+      description: "Transformation de photo en œuvre d'art numérique. Nous avons utilisé des techniques avancées de retouche et de peinture numérique pour créer des portraits uniques qui capturent la personnalité des sujets.",
+      client: "Client Privé",
       date: "Novembre 2022",
-      service: "Habillage Véhicule",
+      service: "Agrandissement des Portraits Artistiques",
       duration: "6 semaines",
-      technologies: ["Adobe Illustrator", "Impression grand format", "Installation vinyle"],
-      testimonial: "\"Nos véhicules habillés par Godlove Empire sont devenus de véritables ambassadeurs mobiles de notre marque. Le design est accrocheur et professionnel, et le travail d'installation a été impeccable.\"",
-      clientName: "Pierre Gagnon",
-      clientPosition: "Directeur Marketing, Livraison Express Québec",
-      clientAvatar: "https://randomuser.me/api/portraits/men/22.jpg",
-      mainImage: "https://images.unsplash.com/photo-1513151233558-d860c5398176?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1064&q=80",
+      technologies: ["Adobe Photoshop", "Procreate", "Retouche photo avancée"],
+      testimonial: "\"Les portraits agrandis créés par Godlove Empire sont absolument magnifiques. Chaque détail est mis en valeur, créant des œuvres d'art uniques que nous chérirons pour toujours.\"",
+      clientName: "Sophie Tremblay",
+      clientPosition: "Client Privé",
+      clientAvatar: "https://randomuser.me/api/portraits/women/65.jpg",
+      mainImage: "https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1064&q=80",
       thumbnails: [
-        "https://images.unsplash.com/photo-1513151233558-d860c5398176?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1064&q=80",
-        "https://images.unsplash.com/photo-1541899481282-d53bffe3c35d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1064&q=80",
-        "https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1064&q=80"
+        "https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1064&q=80",
+        "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1064&q=80",
+        "https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1064&q=80"
       ]
     }
   };
@@ -264,7 +274,7 @@ function setupProjectGallery() {
   function showProjectDetail(projectId) {
     const project = projects[projectId];
     if (!project) return;
-    
+
     // Update detail page content
     document.getElementById('detail-title').textContent = project.title;
     document.getElementById('detail-category').textContent = project.category;
@@ -278,11 +288,11 @@ function setupProjectGallery() {
     document.getElementById('detail-client-position').textContent = project.clientPosition;
     document.getElementById('detail-client-avatar').src = project.clientAvatar;
     document.getElementById('detail-main-image').src = project.mainImage;
-    
+
     // Show detail page and hide gallery
     document.getElementById('projects-gallery').classList.add('hidden');
     document.getElementById('project-detail').classList.remove('hidden');
-    
+
     // Scroll to top
     window.scrollTo(0, 0);
   }
@@ -312,7 +322,7 @@ function setupProjectGallery() {
 
   // Attach event listeners to thumbnail images
   document.querySelectorAll('[onclick^="changeDetailImage"]').forEach(thumb => {
-    thumb.addEventListener('click', function(e) {
+    thumb.addEventListener('click', function (e) {
       e.stopPropagation();
       const src = this.getAttribute('onclick').match(/'([^']+)'/)[1];
       changeDetailImage(src);
@@ -322,18 +332,18 @@ function setupProjectGallery() {
   // Filter functionality
   const filterButtons = document.querySelectorAll('.filter-btn');
   const projectsContainer = document.getElementById('projects-container');
-  
+
   if (filterButtons.length && projectsContainer) {
     filterButtons.forEach(button => {
-      button.addEventListener('click', function() {
+      button.addEventListener('click', function () {
         const filter = this.getAttribute('data-filter');
-        
+
         // Update active button
         filterButtons.forEach(btn => btn.classList.remove('active', 'text-white', 'border-[#A00000]'));
         filterButtons.forEach(btn => btn.classList.add('border-neutral-700', 'text-neutral-300'));
         this.classList.add('active', 'text-white', 'border-[#A00000]');
         this.classList.remove('border-neutral-700', 'text-neutral-300');
-        
+
         // Filter projects
         document.querySelectorAll('.project-card').forEach(project => {
           const category = project.getAttribute('data-category');
@@ -354,7 +364,7 @@ function setupServicesFilter() {
 
   const filterButtons = document.querySelectorAll('.filter-btn');
   const services = document.querySelectorAll('.service-card');
-  
+
   // Show only design services by default
   services.forEach(service => {
     const category = service.getAttribute('data-category');
@@ -364,17 +374,17 @@ function setupServicesFilter() {
       service.style.display = 'none';
     }
   });
-  
+
   filterButtons.forEach(button => {
-    button.addEventListener('click', function() {
+    button.addEventListener('click', function () {
       const filter = this.getAttribute('data-filter');
-      
+
       // Update active button
       filterButtons.forEach(btn => btn.classList.remove('active', 'text-white', 'border-[#A00000]'));
       filterButtons.forEach(btn => btn.classList.add('border-neutral-700', 'text-neutral-300'));
       this.classList.add('active', 'text-white', 'border-[#A00000]');
       this.classList.remove('border-neutral-700', 'text-neutral-300');
-      
+
       // Filter services
       services.forEach(service => {
         const category = service.getAttribute('data-category');
@@ -415,7 +425,7 @@ function setupFAQAccordion() {
     const minusIcon = item.querySelector('.accordion-icon.minus');
 
     if (header) {
-      header.addEventListener('click', function() {
+      header.addEventListener('click', function () {
         const isExpanded = content.classList.contains('expanded');
 
         if (isExpanded) {
@@ -443,19 +453,19 @@ function setupContactForm() {
   const contactForm = document.querySelector('form');
   if (!contactForm) return;
 
-  contactForm.addEventListener('submit', function(e) {
+  contactForm.addEventListener('submit', function (e) {
     e.preventDefault();
-    
+
     // Basic form validation
     const name = this.querySelector('input[type="text"]').value.trim();
     const email = this.querySelector('input[type="email"]').value.trim();
     const message = this.querySelector('textarea').value.trim();
-    
+
     if (!name || !email || !message) {
       alert('Veuillez remplir tous les champs obligatoires.');
       return;
     }
-    
+
     // Here you would typically send the form data to a server
     console.log('Form submitted:', { name, email, message });
     alert('Merci pour votre message! Nous vous contacterons bientôt.');
@@ -465,14 +475,14 @@ function setupContactForm() {
   // File upload styling
   const fileUpload = document.querySelector('.file-upload-area');
   if (fileUpload) {
-    fileUpload.addEventListener('click', function() {
+    fileUpload.addEventListener('click', function () {
       document.getElementById('fileInput').click();
     });
   }
 }
 
 // Initialize all functionality when DOM is loaded
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
   loadNavigation();
   loadFooter();
   setupProjectGallery();
