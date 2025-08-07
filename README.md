@@ -81,17 +81,19 @@ npm run format
 
 **Project Structure**:
 ```
-/godlove-empire-portfolio
-  /dist
-    index.html
-    about.html
-    services.html
-    project.html
-    projects.html
-    contact.html
-  /assets
-    /js
-      main.js
+frontend/
+├── assets/
+│   ├── css/
+│   │   └── style.css
+│   └── js/
+│       └── main.js
+└── pages/
+    ├── index.html              <-- ✅ Home page
+    ├── services.html           <-- ✅ Services page
+    ├── projects.html           <-- ✅ Projects page
+    ├── about-us.html           <-- ✅ About Us page
+    ├── contact-us.html         <-- ✅ Contact Us page
+    └── faq.html                <-- ✅ FAQ page
 ```
 
 ## Team
@@ -124,19 +126,7 @@ Full text in [LICENSE](LICENSE) file.
 <img width="943" height="539" alt="Screenshot 2025-07-15 000202" src="https://github.com/user-attachments/assets/f5c69000-a03c-4c6b-bf29-463fcc3bd860" />
 
 
-frontend/
-├── assets/
-│   ├── css/
-│   │   └── style.css
-│   └── js/
-│       └── main.js
-└── pages/
-    ├── index.html              <-- ✅ Home page
-    ├── services.html           <-- ✅ Services page
-    ├── projects.html           <-- ✅ Projects page
-    ├── about-us.html           <-- ✅ About Us page
-    ├── contact-us.html         <-- ✅ Contact Us page
-    └── faq.html                <-- ✅ FAQ page
+
 
 
 
